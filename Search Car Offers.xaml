@@ -1,0 +1,1023 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1182,1079" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="44">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart sap:VirtualizedContainerService.HintSize="732,1014" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dtPreferences" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Config" />
+      <Variable x:TypeArguments="s:String[]" Name="siteArray" />
+      <Variable x:TypeArguments="x:Int32" Name="iterator" />
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <av:Point x:Key="ShapeLocation">240,2.5</av:Point>
+        <av:Size x:Key="ShapeSize">60,75</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">270,77.5 270,114.5</av:PointCollection>
+        <x:Double x:Key="Height">977.816</x:Double>
+        <x:Double x:Key="Width">697.5</x:Double>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID4</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID0">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">170,184.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">270,235.5 270,280</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Read Data From Preferences File" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+        <ueab:ExcelProcessScopeX.Body>
+          <ActivityAction x:TypeArguments="ui:IExcelProcess">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="562,617" sap2010:WorkflowViewState.IdRef="Sequence_15">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" AutoSave="False" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="520,525" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_4" WorkbookPath="CarPreferences.xlsx">
+                <ueab:ExcelApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,259" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,167" sap2010:WorkflowViewState.IdRef="ReadRangeX_5" Range="[Excel.Sheet(&quot;Preferences&quot;)]" SaveTo="[dtPreferences]" />
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelApplicationCard.Body>
+              </ueab:ExcelApplicationCard>
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelProcessScopeX.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ueab:ExcelProcessScopeX>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">139,280</av:Point>
+              <av:Size x:Key="ShapeSize">262,60</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">270,340 270,380</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign.To>
+              <OutArgument x:TypeArguments="s:String[]">[siteArray]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="s:String[]">[{Config("AutoVitURL").ToString,Config("MobileDeURLRO").ToString,Config("CarzzURL").ToString}]</InArgument>
+            </Assign.Value>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Assign>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">139,380</av:Point>
+                  <av:Size x:Key="ShapeSize">262,60</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">270,440 270,474.5</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[iterator]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Assign>
+              <FlowStep.Next>
+                <FlowStep x:Name="__ReferenceID1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">170,474.5</av:Point>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="512,1324" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[siteArray]">
+                    <ui:ForEach.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,1200" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:Boolean" Name="mobiledeExists" />
+                            <Variable x:TypeArguments="x:Boolean" Name="autovitExists" />
+                            <Variable x:TypeArguments="x:Boolean" Name="carzzExists" />
+                            <Variable x:TypeArguments="ui:Browser" Name="firefoxBrowser" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Firefox" DisplayName="Attach Browser firefox" sap:VirtualizedContainerService.HintSize="434,297" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="b2fdfd69c40556395e55b04c3d7484cf" Selector="&lt;html app='firefox.exe' title='*' /&gt;" UiBrowser="[firefoxBrowser]">
+                            <ui:BrowserScope.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,151" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[siteArray(iterator).ToString]" />
+                                </Sequence>
+                              </ActivityAction>
+                            </ui:BrowserScope.Body>
+                          </ui:BrowserScope>
+                          <ui:UiElementExists DisplayName="Mobile.de" Exists="[mobiledeExists]" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                            <ui:UiElementExists.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4d4c4ab1-dd2c-4dca-bc92-e82cd98f2e98" InformativeScreenshot="abeeb2b894ee8b940d6cf0b7e99d01c5" Selector="&lt;html app='firefox.exe' title='* mobile.de/ro – *' /&gt;&lt;webctrl tag='I' /&gt;" TimeoutMS="500">
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:UiElementExists.Target>
+                          </ui:UiElementExists>
+                          <ui:UiElementExists DisplayName="autovit" Exists="[autovitExists]" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+                            <ui:UiElementExists.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8a28b7dd-6945-4382-920f-7a3b69d0046e" InformativeScreenshot="3b178c25bd5925fed7bcd213be20b10c" Selector="&lt;html app='firefox.exe' title='AUTOVIT - Anunturi auto, vanzari autoturisme noi si second hand.' /&gt;&lt;webctrl tag='IMG' /&gt;" TimeoutMS="500">
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:UiElementExists.Target>
+                          </ui:UiElementExists>
+                          <ui:UiElementExists DisplayName="carzz" Exists="[carzzExists]" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
+                            <ui:UiElementExists.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fe716953-db5e-41b5-aa7d-826f417460eb" InformativeScreenshot="9d74b5008dbee64ff6d543738e50dde6" Selector="&lt;html app='firefox.exe' title='CarZZ.ro • Vanzari auto ?? Piese auto ?? Masini noi si second hand' /&gt;&lt;webctrl id='logo' tag='DIV' /&gt;" TimeoutMS="500">
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:UiElementExists.Target>
+                          </ui:UiElementExists>
+                          <If Condition="[autovitExists]" sap:VirtualizedContainerService.HintSize="630,3157" sap2010:WorkflowViewState.IdRef="If_1">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="594,2970" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtPreferences]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="552,2878" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
+                                  <ui:ForEachRow.Body>
+                                    <ActivityAction x:TypeArguments="sd:DataRow">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="518,2758" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                        <Sequence.Variables>
+                                          <Variable x:TypeArguments="sd:DataTable" Name="ExtractedDataTable" />
+                                        </Sequence.Variables>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBefore="1000" DisplayName="Type Into  Marca" EmptyField="True" sap:VirtualizedContainerService.HintSize="476,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[row.Item(&quot;BRAND&quot;).ToString]">
+                                          <ui:TypeInto.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="185d5db5-7290-4629-a805-c8b03fa3b1f9" InformativeScreenshot="29c4ebe020c462cfc20db94a276a1d72" Selector="&lt;html app='firefox.exe' title='AUTOVIT - Anunturi auto, vanzari autoturisme noi si second hand.' /&gt;&lt;webctrl id='filter_enum_make' tag='INPUT' type='text' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:TypeInto.Target>
+                                        </ui:TypeInto>
+                                        <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey enter" sap:VirtualizedContainerService.HintSize="476,152" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+                                          <ui:SendHotkey.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e024ba04-2ed0-43e2-9228-47a836e1ecdc" InformativeScreenshot="631d50e834ce0eaa39210282f57cdf47" Selector="&lt;html app='firefox.exe' title='AUTOVIT - *' /&gt;&lt;webctrl id='filter_enum_make' tag='INPUT' type='text' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:SendHotkey.Target>
+                                        </ui:SendHotkey>
+                                        <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into model" EmptyField="True" sap:VirtualizedContainerService.HintSize="476,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SimulateType="True" Text="[row.Item(&quot;MODEL&quot;).ToString]">
+                                          <ui:TypeInto.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4e974049-f9c2-44a3-9794-9ab709d699a3" InformativeScreenshot="b8b945c22f89c741ca1398d0fde46da6" Selector="&lt;html app='firefox.exe' title='AUTOVIT - *' /&gt;&lt;webctrl id='filter_enum_model' tag='INPUT' type='text' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:TypeInto.Target>
+                                        </ui:TypeInto>
+                                        <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Send Hotkey enter" sap:VirtualizedContainerService.HintSize="476,152" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
+                                          <ui:SendHotkey.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="04ff704f-84bd-416c-94a1-c9a1f7372fea" InformativeScreenshot="ca165e2bbd7bef7b13aadc70bca30d6f" Selector="&lt;html app='firefox.exe' title='AUTOVIT - Anunturi auto, vanzari autoturisme noi si second hand.' /&gt;&lt;webctrl id='filter_enum_model' tag='INPUT' type='text' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:SendHotkey.Target>
+                                        </ui:SendHotkey>
+                                        <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into year begin" sap:VirtualizedContainerService.HintSize="476,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[row.Item(&quot;YEAR BEGIN&quot;).ToString]">
+                                          <ui:TypeInto.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4aafe08e-18d4-4711-861f-5e45f6507cae" InformativeScreenshot="2b47043a7c7f40432581ff66552adb5d" Selector="&lt;html app='firefox.exe' title='AUTOVIT - *' /&gt;&lt;webctrl id='filter_float_year:from' tag='INPUT' type='text' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:TypeInto.Target>
+                                        </ui:TypeInto>
+                                        <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey enter" sap:VirtualizedContainerService.HintSize="476,152" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="enter" KeyModifiers="None" SpecialKey="True">
+                                          <ui:SendHotkey.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="581e6108-ffb8-4e24-9c39-4d4b21b233da" InformativeScreenshot="2b47043a7c7f40432581ff66552adb5d" Selector="&lt;html app='firefox.exe' title='AUTOVIT - *' /&gt;&lt;webctrl id='filter_float_year:from' tag='INPUT' type='text' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:SendHotkey.Target>
+                                        </ui:SendHotkey>
+                                        <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into year end" sap:VirtualizedContainerService.HintSize="476,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[row.Item(&quot;YEAR END&quot;).ToString]">
+                                          <ui:TypeInto.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8e03af24-54b1-4076-be3d-45bffaf734a2" InformativeScreenshot="bc5f658854b72f3dc11edca868b7da99" Selector="&lt;html app='firefox.exe' title='AUTOVIT - *' /&gt;&lt;webctrl id='filter_float_year:to' tag='INPUT' type='text' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:TypeInto.Target>
+                                        </ui:TypeInto>
+                                        <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey enter" sap:VirtualizedContainerService.HintSize="476,152" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="enter" KeyModifiers="None" SpecialKey="True">
+                                          <ui:SendHotkey.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="af63916f-eb4b-4810-b46e-97725c6c7e96" InformativeScreenshot="bc5f658854b72f3dc11edca868b7da99" Selector="&lt;html app='firefox.exe' title='AUTOVIT - Anunturi auto, vanzari autoturisme noi si second hand.' /&gt;&lt;webctrl id='filter_float_year:to' tag='INPUT' type='text' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:SendHotkey.Target>
+                                        </ui:SendHotkey>
+                                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into fuel" sap:VirtualizedContainerService.HintSize="476,134" sap2010:WorkflowViewState.IdRef="TypeInto_5" Text="[row.Item(&quot;FUEL TYPE&quot;).ToString]">
+                                          <ui:TypeInto.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0642e01c-41f7-4327-9b24-82c48010fee8" InformativeScreenshot="2f7d97e4b5f4ec1e829452639346c03d" Selector="&lt;html app='firefox.exe' title='AUTOVIT - *' /&gt;&lt;webctrl id='filter_enum_fuel_type' tag='INPUT' type='text' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:TypeInto.Target>
+                                        </ui:TypeInto>
+                                        <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey enter" sap:VirtualizedContainerService.HintSize="476,152" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="enter" KeyModifiers="None" SpecialKey="True">
+                                          <ui:SendHotkey.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="def7b590-7368-4d72-ade8-da4859860bf4" InformativeScreenshot="2f7d97e4b5f4ec1e829452639346c03d" Selector="&lt;html app='firefox.exe' title='AUTOVIT - *' /&gt;&lt;webctrl id='filter_enum_fuel_type' tag='INPUT' type='text' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:SendHotkey.Target>
+                                        </ui:SendHotkey>
+                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click cauta" sap:VirtualizedContainerService.HintSize="476,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                          <ui:Click.CursorPosition>
+                                            <ui:CursorPosition Position="Center">
+                                              <ui:CursorPosition.OffsetX>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:CursorPosition.OffsetX>
+                                              <ui:CursorPosition.OffsetY>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:CursorPosition.OffsetY>
+                                            </ui:CursorPosition>
+                                          </ui:Click.CursorPosition>
+                                          <ui:Click.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="672ee87a-151f-49bf-b755-47dfa75404fc" InformativeScreenshot="fbe31ec85f0471df0f1f829d6304b992" Selector="&lt;html app='firefox.exe' title='AUTOVIT - *' /&gt;&lt;webctrl aria-role='button' parentid='__next' tag='BUTTON' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:Click.Target>
+                                        </ui:Click>
+                                        <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="476,436" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Attach Browser 'Autoturis Page'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="BrowserScope_9" InformativeScreenshot="58623f559d38ad6f96d384eb78b504c7" Selector="&lt;html app='firefox.exe' title='* - autovit.ro' /&gt;">
+                                            <ui:BrowserScope.Body>
+                                              <ActivityAction x:TypeArguments="x:Object">
+                                                <ActivityAction.Argument>
+                                                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                                </ActivityAction.Argument>
+                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:ExtractData DelayBetweenPagesMS="{x:Null}" ContinueOnError="True" DataTable="[ExtractedDataTable]" DisplayName="Extract Structured Data 'MAIN'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Name of Car' attr='text' name2='URL' attr2='href'&gt;&lt;webctrl tag='article' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h2' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_8" MaxNumberOfResults="50" NextLinkSelector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;svg' idx='2' parentid='__next' tag='svg' /&gt;" SimulateClick="True">
+                                                    <ui:ExtractData.Target>
+                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7af580a3-6ceb-409e-8ca0-caf30742e2dd" InformativeScreenshot="fa4e83389e368548996b626c2714e772" Selector="&lt;webctrl tag='MAIN' /&gt;" WaitForReady="COMPLETE">
+                                                        <ui:Target.TimeoutMS>
+                                                          <InArgument x:TypeArguments="x:Int32" />
+                                                        </ui:Target.TimeoutMS>
+                                                      </ui:Target>
+                                                    </ui:ExtractData.Target>
+                                                  </ui:ExtractData>
+                                                </Sequence>
+                                              </ActivityAction>
+                                            </ui:BrowserScope.Body>
+                                          </ui:BrowserScope>
+                                        </Sequence>
+                                        <ui:WriteRange AddHeaders="True" DataTable="[ExtractedDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="476,115" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="[&quot;Oferte&quot; + iterator.ToString]" StartingCell="A1" WorkbookPath="Oferte masini.xlsx" />
+                                        <ui:NavigateTo Browser="[firefoxBrowser]" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="476,59" sap2010:WorkflowViewState.IdRef="NavigateTo_2" Url="[siteArray(iterator).ToString]" />
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </ui:ForEachRow.Body>
+                                </ui:ForEachRow>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_51">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                          <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                            <ui:IfElseIf.ConditionBlocks>
+                              <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                <ui:IfElseIfBlock BlockType="If" Condition="[mobiledeExists]">
+                                  <ui:IfElseIfBlock.Then>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="636,1943" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="594,1851" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                        <Sequence.Variables>
+                                          <Variable x:TypeArguments="sd:DataTable" Name="ExtractedDataTable2" />
+                                        </Sequence.Variables>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtPreferences]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="552,1759" sap2010:WorkflowViewState.IdRef="ForEachRow_12">
+                                          <ui:ForEachRow.Body>
+                                            <ActivityAction x:TypeArguments="sd:DataRow">
+                                              <ActivityAction.Argument>
+                                                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                                              </ActivityAction.Argument>
+                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="518,1640" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                                                <Sequence.Variables>
+                                                  <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+                                                </Sequence.Variables>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into  Marca" EmptyField="True" sap:VirtualizedContainerService.HintSize="476,134" sap2010:WorkflowViewState.IdRef="TypeInto_6" SimulateType="False" Text="[row.Item(&quot;BRAND&quot;).ToString]">
+                                                  <ui:TypeInto.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="185d5db5-7290-4629-a805-c8b03fa3b1f9" InformativeScreenshot="a024d8c7447c682fa330b076a6504f1b" Selector="&lt;html app='firefox.exe' title='* mobile.de/ro – *' /&gt;&lt;webctrl tag='SELECT' /&gt;">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                      <ui:Target.WaitForReady>
+                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                      </ui:Target.WaitForReady>
+                                                    </ui:Target>
+                                                  </ui:TypeInto.Target>
+                                                </ui:TypeInto>
+                                                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey enter" sap:VirtualizedContainerService.HintSize="476,142" sap2010:WorkflowViewState.IdRef="SendHotkey_6" Key="enter" KeyModifiers="None" SpecialKey="True">
+                                                  <ui:SendHotkey.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e024ba04-2ed0-43e2-9228-47a836e1ecdc" InformativeScreenshot="a024d8c7447c682fa330b076a6504f1b" Selector="&lt;html app='firefox.exe' title='* mobile.de/ro – *' /&gt;&lt;webctrl tag='SELECT' /&gt;">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                      <ui:Target.WaitForReady>
+                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                      </ui:Target.WaitForReady>
+                                                    </ui:Target>
+                                                  </ui:SendHotkey.Target>
+                                                </ui:SendHotkey>
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into model" sap:VirtualizedContainerService.HintSize="476,134" sap2010:WorkflowViewState.IdRef="TypeInto_7" Text="[row.Item(&quot;MODEL&quot;).ToString]">
+                                                  <ui:TypeInto.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4e974049-f9c2-44a3-9794-9ab709d699a3" InformativeScreenshot="3f8fea6d1012fbddcccf3d504301c096" Selector="&lt;html app='firefox.exe' title='* mobile.de/ro – *' /&gt;&lt;webctrl id='makeModelVariant1Model' tag='SELECT' /&gt;" WaitForReady="INTERACTIVE">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                    </ui:Target>
+                                                  </ui:TypeInto.Target>
+                                                </ui:TypeInto>
+                                                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey enter" sap:VirtualizedContainerService.HintSize="476,142" sap2010:WorkflowViewState.IdRef="SendHotkey_7" Key="enter" KeyModifiers="None" SpecialKey="True">
+                                                  <ui:SendHotkey.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="04ff704f-84bd-416c-94a1-c9a1f7372fea" InformativeScreenshot="3f8fea6d1012fbddcccf3d504301c096" Selector="&lt;html app='firefox.exe' title='* mobile.de/ro – *' /&gt;&lt;webctrl id='makeModelVariant1Model' tag='SELECT' /&gt;">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                      <ui:Target.WaitForReady>
+                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                      </ui:Target.WaitForReady>
+                                                    </ui:Target>
+                                                  </ui:SendHotkey.Target>
+                                                </ui:SendHotkey>
+                                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click afisare" sap:VirtualizedContainerService.HintSize="476,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                  <ui:Click.CursorPosition>
+                                                    <ui:CursorPosition Position="Center">
+                                                      <ui:CursorPosition.OffsetX>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:CursorPosition.OffsetX>
+                                                      <ui:CursorPosition.OffsetY>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:CursorPosition.OffsetY>
+                                                    </ui:CursorPosition>
+                                                  </ui:Click.CursorPosition>
+                                                  <ui:Click.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="672ee87a-151f-49bf-b755-47dfa75404fc" InformativeScreenshot="74f54bcfdc7faebfc5184f3a61d16b6a" Selector="&lt;html app='firefox.exe' title='* mobile.de/ro – *' /&gt;&lt;webctrl tag='INPUT' type='submit' /&gt;">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                      <ui:Target.WaitForReady>
+                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                      </ui:Target.WaitForReady>
+                                                    </ui:Target>
+                                                  </ui:Click.Target>
+                                                </ui:Click>
+                                                <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="476,436" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Attach Browser 'Automobil Page'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="BrowserScope_6" InformativeScreenshot="f4f690a8a41d737eee853b9affc095c9" Selector="&lt;html app='firefox.exe' title='* mobile.de' /&gt;">
+                                                    <ui:BrowserScope.Body>
+                                                      <ActivityAction x:TypeArguments="x:Object">
+                                                        <ActivityAction.Argument>
+                                                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                                        </ActivityAction.Argument>
+                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <ui:ExtractData DelayBetweenPagesMS="{x:Null}" ContinueOnError="True" DataTable="[ExtractedDataTable2]" DisplayName="Extract Structured Data 'DIV'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Name of Car' attr='text' name2='URL' attr2='href'&gt;&lt;webctrl tag='article' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h3' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_5" MaxNumberOfResults="75" NextLinkSelector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;a' href='/ro/categorie/automobil/vhc:car,pgn:2,pgs:10' tag='A' /&gt;" SimulateClick="True">
+                                                            <ui:ExtractData.Target>
+                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="672f51e3-1ab6-4b41-8904-0af8e7554d99" InformativeScreenshot="3b67b33eb6ac5c4171de91fa027e0794" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                                                                <ui:Target.TimeoutMS>
+                                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                                </ui:Target.TimeoutMS>
+                                                              </ui:Target>
+                                                            </ui:ExtractData.Target>
+                                                          </ui:ExtractData>
+                                                        </Sequence>
+                                                      </ActivityAction>
+                                                    </ui:BrowserScope.Body>
+                                                  </ui:BrowserScope>
+                                                </Sequence>
+                                                <ui:WriteRange AddHeaders="True" DataTable="[ExtractedDataTable2]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="476,115" sap2010:WorkflowViewState.IdRef="WriteRange_7" SheetName="[&quot;Oferte&quot; + iterator.ToString]" StartingCell="A1" WorkbookPath="Oferte masini.xlsx" />
+                                                <ui:NavigateTo Browser="[firefoxBrowser]" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="476,59" sap2010:WorkflowViewState.IdRef="NavigateTo_3" Url="[siteArray(iterator).ToString]" />
+                                              </Sequence>
+                                            </ActivityAction>
+                                          </ui:ForEachRow.Body>
+                                        </ui:ForEachRow>
+                                      </Sequence>
+                                    </Sequence>
+                                  </ui:IfElseIfBlock.Then>
+                                </ui:IfElseIfBlock>
+                              </sc:BindingList>
+                            </ui:IfElseIf.ConditionBlocks>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:IfElseIf>
+                          <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+                            <ui:IfElseIf.ConditionBlocks>
+                              <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                <ui:IfElseIfBlock BlockType="If" Condition="[carzzExists]">
+                                  <ui:IfElseIfBlock.Then>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="636,1943" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="594,1851" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                        <Sequence.Variables>
+                                          <Variable x:TypeArguments="sd:DataTable" Name="ExtractedDataTable2" />
+                                          <Variable x:TypeArguments="sd:DataTable" Name="ExtractedDataTable3" />
+                                        </Sequence.Variables>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtPreferences]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="552,1759" sap2010:WorkflowViewState.IdRef="ForEachRow_13">
+                                          <ui:ForEachRow.Body>
+                                            <ActivityAction x:TypeArguments="sd:DataRow">
+                                              <ActivityAction.Argument>
+                                                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                                              </ActivityAction.Argument>
+                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="518,1640" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                                                <Sequence.Variables>
+                                                  <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+                                                </Sequence.Variables>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into  Marca" EmptyField="False" sap:VirtualizedContainerService.HintSize="476,134" sap2010:WorkflowViewState.IdRef="TypeInto_9" SimulateType="False" Text="[row.Item(&quot;BRAND&quot;).ToString]">
+                                                  <ui:TypeInto.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="185d5db5-7290-4629-a805-c8b03fa3b1f9" InformativeScreenshot="c8e351181064e9b92781ba214b63dd7f" Selector="&lt;html app='firefox.exe' title='CarZZ.ro • Vanzari auto ?? Piese auto ?? Masini noi si second hand' /&gt;&lt;webctrl tag='SELECT' /&gt;">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                      <ui:Target.WaitForReady>
+                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                      </ui:Target.WaitForReady>
+                                                    </ui:Target>
+                                                  </ui:TypeInto.Target>
+                                                </ui:TypeInto>
+                                                <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Send Hotkey enter" sap:VirtualizedContainerService.HintSize="476,142" sap2010:WorkflowViewState.IdRef="SendHotkey_9" Key="enter" KeyModifiers="None" SpecialKey="True">
+                                                  <ui:SendHotkey.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e024ba04-2ed0-43e2-9228-47a836e1ecdc" InformativeScreenshot="c8e351181064e9b92781ba214b63dd7f" Selector="&lt;html app='firefox.exe' title='CarZZ.ro • Vanzari auto ?? Piese auto ?? Masini noi si second hand' /&gt;&lt;webctrl tag='SELECT' /&gt;">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                      <ui:Target.WaitForReady>
+                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                      </ui:Target.WaitForReady>
+                                                    </ui:Target>
+                                                  </ui:SendHotkey.Target>
+                                                </ui:SendHotkey>
+                                                <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into model" EmptyField="False" sap:VirtualizedContainerService.HintSize="476,134" sap2010:WorkflowViewState.IdRef="TypeInto_10" SimulateType="False" Text="[row.Item(&quot;MODEL&quot;).ToString]">
+                                                  <ui:TypeInto.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4e974049-f9c2-44a3-9794-9ab709d699a3" InformativeScreenshot="11a068d3f670378d9ec5060a4bb90ad9" Selector="&lt;html app='firefox.exe' title='CarZZ.ro • Vanzari auto ?? Piese auto ?? Masini noi si second hand' /&gt;&lt;webctrl id='auto-model' tag='SELECT' /&gt;">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                      <ui:Target.WaitForReady>
+                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                      </ui:Target.WaitForReady>
+                                                    </ui:Target>
+                                                  </ui:TypeInto.Target>
+                                                </ui:TypeInto>
+                                                <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Send Hotkey enter" sap:VirtualizedContainerService.HintSize="476,142" sap2010:WorkflowViewState.IdRef="SendHotkey_10" Key="enter" KeyModifiers="None" SpecialKey="True">
+                                                  <ui:SendHotkey.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="04ff704f-84bd-416c-94a1-c9a1f7372fea" InformativeScreenshot="11a068d3f670378d9ec5060a4bb90ad9" Selector="&lt;html app='firefox.exe' title='CarZZ.ro • *' /&gt;&lt;webctrl id='auto-model' tag='SELECT' /&gt;">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                      <ui:Target.WaitForReady>
+                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                      </ui:Target.WaitForReady>
+                                                    </ui:Target>
+                                                  </ui:SendHotkey.Target>
+                                                </ui:SendHotkey>
+                                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click aplica" sap:VirtualizedContainerService.HintSize="476,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                  <ui:Click.CursorPosition>
+                                                    <ui:CursorPosition Position="Center">
+                                                      <ui:CursorPosition.OffsetX>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:CursorPosition.OffsetX>
+                                                      <ui:CursorPosition.OffsetY>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:CursorPosition.OffsetY>
+                                                    </ui:CursorPosition>
+                                                  </ui:Click.CursorPosition>
+                                                  <ui:Click.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="672ee87a-151f-49bf-b755-47dfa75404fc" InformativeScreenshot="6aa3ff65afd9599842ab3d3889fa3838" Selector="&lt;html app='firefox.exe' title='CarZZ.ro • *' /&gt;&lt;webctrl parentid='hold_together' tag='INPUT' type='submit' /&gt;">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                      <ui:Target.WaitForReady>
+                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                      </ui:Target.WaitForReady>
+                                                    </ui:Target>
+                                                  </ui:Click.Target>
+                                                </ui:Click>
+                                                <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="476,436" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="BrowserScope_8" InformativeScreenshot="b5bd03615b6f6a3cc1c9d53a2d394673" Selector="&lt;html app='firefox.exe' title='* • CarZZ.ro' /&gt;">
+                                                    <ui:BrowserScope.Body>
+                                                      <ActivityAction x:TypeArguments="x:Object">
+                                                        <ActivityAction.Argument>
+                                                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                                        </ActivityAction.Argument>
+                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <ui:ExtractData DelayBetweenPagesMS="{x:Null}" ContinueOnError="True" DataTable="[ExtractedDataTable3]" DisplayName="Extract Structured Data 'DIV  list_cart_holder'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Name of Car' attr='text' name2='URL' attr2='href'&gt;&lt;webctrl tag='a' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_7" MaxNumberOfResults="50" NextLinkSelector="&lt;webctrl aaname='Pagina Următoare' parentid='pagination' tag='A' /&gt;" SimulateClick="True">
+                                                            <ui:ExtractData.Target>
+                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="acad4aab-a93f-43e8-af08-2e113c190d69" InformativeScreenshot="7e5a9b5b23c65fd0c6ab776188974507" Selector="&lt;webctrl id='list_cart_holder' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                                                                <ui:Target.TimeoutMS>
+                                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                                </ui:Target.TimeoutMS>
+                                                              </ui:Target>
+                                                            </ui:ExtractData.Target>
+                                                          </ui:ExtractData>
+                                                        </Sequence>
+                                                      </ActivityAction>
+                                                    </ui:BrowserScope.Body>
+                                                  </ui:BrowserScope>
+                                                </Sequence>
+                                                <ui:WriteRange AddHeaders="True" DataTable="[ExtractedDataTable3]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="476,115" sap2010:WorkflowViewState.IdRef="WriteRange_8" SheetName="[&quot;Oferte&quot; + iterator.ToString]" StartingCell="A1" WorkbookPath="Oferte masini.xlsx" />
+                                                <ui:NavigateTo Browser="[firefoxBrowser]" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="476,59" sap2010:WorkflowViewState.IdRef="NavigateTo_4" Url="[siteArray(iterator).ToString]" />
+                                              </Sequence>
+                                            </ActivityAction>
+                                          </ui:ForEachRow.Body>
+                                        </ui:ForEachRow>
+                                      </Sequence>
+                                    </Sequence>
+                                  </ui:IfElseIfBlock.Then>
+                                </ui:IfElseIfBlock>
+                              </sc:BindingList>
+                            </ui:IfElseIf.ConditionBlocks>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:IfElseIf>
+                          <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">[iterator]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">[iterator + 1]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ForEach.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:ForEach>
+                </FlowStep>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <FlowStep x:Name="__ReferenceID4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">170,114.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">270,165.5 270,184.5</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="InitAllSettings.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
+          <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings","Constants"}]</InArgument>
+          <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[Config]</OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <FlowStep.Next>
+        <x:Reference>__ReferenceID0</x:Reference>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <FlowStep>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">497.5,304.816</av:Point>
+          <av:Size x:Key="ShapeSize">200,66</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Search through Autovit " sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_47">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Firefox to Navigate to the main page of Autovit" sap:VirtualizedContainerService.HintSize="628,3750" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" InteractionMode="Simulate" ScopeGuid="02c75808-37bd-4b44-a716-c356e13a0bfc" Version="V1">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="594,3534" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtPreferences]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="552,3440" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
+                  <ui:ForEachRow.Body>
+                    <ActivityAction x:TypeArguments="sd:DataRow">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="518,3319" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="476,81" sap2010:WorkflowViewState.IdRef="NGoToUrl_8" Url="[Config(&quot;AutoVitURL&quot;).ToString]" Version="V1" />
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into Brand Field" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="476,216" sap2010:WorkflowViewState.IdRef="NTypeInto_50" ScopeIdentifier="02c75808-37bd-4b44-a716-c356e13a0bfc" Text="[row.Item(&quot;BRAND&quot;).ToString]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.autovit.ro/" DesignTimeRectangle="673, 309, 263, 44" ElementType="InputBox" FriendlyName="'INPUT filter_enum_make'" FullSelectorArgument="&lt;webctrl id='filter_enum_make' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='filter_enum_make' tag='INPUT' type='text' aaname='Marca' /&gt;" Guid="7bea01f7-d576-4665-aaa9-c107a47007ab" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQsAAAAwCAYAAAAGn1+IAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJuSURBVHhe7dlBbtpAFIDhql311pF6HqTsEWqlrlB2iRJyAJN9yAGmfsZ2bAjWUwoogu+TRgTbTFbzZ4Z8KwAJYgGkjGKx2byV+4fH8vvPX8MwrnhEB6IHQ30s4kY8VK1f2ivAtYoORA+GwehjESURCqATPYgudPpYREUAhoZdEAvgILEAUsQCSBELIEUsgBSxAFLEAkgRCyBFLIAUsQBSxAJIEQsgRSyAFLEAUk4ai2p5W2azu1K17/ety3J2W+arTfse+KrOEIvDMXhdLSbvA1/HyWOxXN6V2fy5vLbX3sWuYlHfX4gFfMLNza/y/cfP1Ihn/9fpY1FtytM8XtuLrWZXsVw3r6NYVHVc6t3GdizKU38r5qnfV89l3tzrjjfb+d8/014/OA9cjkwwjhGKcIZYxA+7u4t24dcLeDcW1Wrw3OhzbRT25qmv1dHpvNafb37lwXngskwF41ihCOeJRbuo+93FYPHu7SxG4qgy3kGMdijN7mHqC9TOcB64PB8F45ihCGeKxfuxY3fR78Vi0x0zujGMxc5xYmrHcHAeuEzDYBw7FOFssei+0HxajRf4KBZ7O4XdnUUyFpPzwOWKSJwiFOGMsWh3F/Vf+d1ro1jshGRyZ9FEYPyv1+Y7i8l5gM84ayy2R4Pxoh3Foj2idEeHeb3wJ3cWjW0w+uNGE4mpeYDPOGksgMshFkCKWAApYgGkiAWQIhZAilgAKWIBpIgFkCIWQIpYACliAaSIBZDyYSzuHx5LtX5p3wHXLnoQXej0sdhs3pqKCAYQHYgeRBc6fSxC3IiSxEOGYVzviA4MQxFGsQA4RCyAhFL+AfWL/OEIk0DcAAAAAElFTkSuQmCC" InformativeScreenshot="983d870f4879e0b7cf1d864ac1ebb8ce.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='firefox.exe' title='AUTOVIT - Anunturi auto, vanzari autoturisme noi si second hand.' /&gt;" SearchSteps="FuzzySelector, Image">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="673, 287, 263, 18" ElementType="Text" FriendlyName="'Marca'" FullSelectorArgument="&lt;webctrl id='downshift-1-label' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='downshift-1-label' tag='LABEL' type='' aaname='Marca' check:text='Marca' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQsAAAAWCAYAAADXarmjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF/SURBVHhe7dhBjoMgFIDhyXQ1Z2LjbTTxMiQexngWexdG8T1FRebtSKb/l5i0YtnxF/wKAGBALACYEAsAJsQCgAmxAGBCLACYEAsAJkks3sG7n/D9Wi43hFnupsauPA7g/8rH4tUEf6vBFNo4RiyAT3SPhWuCW4Lg/Fvui7GPEXHxGWIBfJpMLIbg43GjD6OM7GPdMnaJxX40keuIjOxEul52JOl8198dY8/zAagpG4t5HuLuotUVHL+vR5PkmTiwfPdT/LTaFroeYfTYcj/SnJ9bb0wSi9J8AGrKx2LfSWwLd/bN+X6ysziJRxWNjO4sjsUfSYhMO4bTfABqeoiFBCL+q2+LflvcmVjIgk6vYiz+CsDjfABqeoyFLnbn1mjoO4VcUJLFbNlZFGJRng9ATYVYLGtVXzbuC/5p97GN6vPFWOgc6QtPeWdRng9ATcVY6PuFY7Fen5EgyNV2hp1FpMHQS8NRmg9ATUksAOAZsQBgQiwAmBALACbEAoBBCL9o2efG7zPshwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                        <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter" sap:VirtualizedContainerService.HintSize="476,198" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_41" ScopeIdentifier="02c75808-37bd-4b44-a716-c356e13a0bfc" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1">
+                          <uix:NKeyboardShortcuts.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.autovit.ro/" DesignTimeRectangle="673, 309, 263, 44" ElementType="InputBox" FriendlyName="'Renault'" FullSelectorArgument="&lt;webctrl id='filter_enum_make' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='filter_enum_make' tag='INPUT' type='text' aaname='Marca' /&gt;" Guid="2e766935-cdf4-4993-b121-c9dddc7abb27" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQsAAAAwCAYAAAAGn1+IAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMlSURBVHhe7dm9TuNAFIbhZKm4FToamjRcyqYCiYoaie1TWYq4FSJ66r0AggAJsUJU9Ahm/R177HEIcCTyA8z7SEdax443zbw79vZCYnT6GLaP70J/eBN6v68ZhslwtP7VAfUgZbG4uH+yk+3Fr2/AMEwek65/dUF9aGIRQ7F1dBt2Rlehf/g39BiGyXK0/tUB9SAGw2KhrUYMhS46OX8Izy92DkCGtP7VAfUgBsM6EXcVKokuAABRD9SFuLvo6WWGnlFUEXYUACL1QF2wPug/PVQNm/JDAEjZe4zYCGIB4C3EAoALsQDgQiwAuBALAC7EAoALsQDgQiwAuBALAC7EAoALsQDgQiwAuBALAC5LjMVlKAab4ddGMoNxmNZn1+cs7G0chEl9BMBn6bHYa1ZlHY/9s/p4XWZiMTn4Ar8J+PpWGIuSFubadxfEAj/Dn8m/agE7Rtd+lt1rfbHQwm0fU7q7kN1QTNPzM48OuldzTtfWn897zOgEoT0/LXaTe8z8VuAb8ARjEaEQu99qYlEt/G4QNsOguKyPdT4u+upcGojJfnmc7AAmRRKdToT8sTCdc8D3814wFhUKsXsuMxbz//UvdRZ4RUGo4hF3FtXnZjoOgzcfYdIAEAvkZ14wFhkKsfsuMxZxJzG7M7BF2oSkHXcsdNz5LrFA3tJgLDoUsrJYVIs0OdYifXOn8EEsLDRpENIAEAvkS5FYRihkhbEodRZ5FY/2nUXKEYskNNWLynjf6u9t71sdEwvgc1Ybi5I9jjQLvQrG60eJD2IRA1B/b1CMuwHoPKKU9yne2Vkkv2H2twJoLTEWAH4SYgHAhVgAcCEWAFyIBQAXYgHAhVgAcCEWAFyIBQAXYgHAhVgAcCEWAFw6segPb0J/eB365YfPL/UVALKnHqgL1oeyE73t4zurxs7oKpycP9SXAcideqAuqA/WidHpox1sHd1aRXQBOwwgX1r/6oB6oC6oD9YJnYy7C51QSXSRPaswDJPdaP2rAzEU6oNYLC7un5pgaPSMEv/MMExek65/dUF9aGIRaauhk/YyI/kywzD5jNa/OqAetEL4D2I2dWvJ6fHnAAAAAElFTkSuQmCC" InformativeScreenshot="e5c91f2db34b2d2401ff7711111d97b1.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='firefox.exe' title='AUTOVIT - Anunturi auto, vanzari autoturisme noi si second hand.' /&gt;" SearchSteps="FuzzySelector, Image">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="673, 287, 263, 18" ElementType="Text" FriendlyName="'Marca'" FullSelectorArgument="&lt;webctrl id='downshift-1-label' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='downshift-1-label' tag='LABEL' type='' aaname='Marca' check:text='Marca' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQsAAAAWCAYAAADXarmjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF/SURBVHhe7dhBjoMgFIDhyXQ1Z2LjbTTxMiQexngWexdG8T1FRebtSKb/l5i0YtnxF/wKAGBALACYEAsAJsQCgAmxAGBCLACYEAsAJkks3sG7n/D9Wi43hFnupsauPA7g/8rH4tUEf6vBFNo4RiyAT3SPhWuCW4Lg/Fvui7GPEXHxGWIBfJpMLIbg43GjD6OM7GPdMnaJxX40keuIjOxEul52JOl8198dY8/zAagpG4t5HuLuotUVHL+vR5PkmTiwfPdT/LTaFroeYfTYcj/SnJ9bb0wSi9J8AGrKx2LfSWwLd/bN+X6ysziJRxWNjO4sjsUfSYhMO4bTfABqeoiFBCL+q2+LflvcmVjIgk6vYiz+CsDjfABqeoyFLnbn1mjoO4VcUJLFbNlZFGJRng9ATYVYLGtVXzbuC/5p97GN6vPFWOgc6QtPeWdRng9ATcVY6PuFY7Fen5EgyNV2hp1FpMHQS8NRmg9ATUksAOAZsQBgQiwAmBALACbEAoBBCL9o2efG7zPshwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NKeyboardShortcuts.Target>
+                        </uix:NKeyboardShortcuts>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into Model Field" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="476,216" sap2010:WorkflowViewState.IdRef="NTypeInto_51" ScopeIdentifier="02c75808-37bd-4b44-a716-c356e13a0bfc" Text="[row.Item(&quot;MODEL&quot;).ToString]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.autovit.ro/" DesignTimeRectangle="387, 391, 263, 44" ElementType="InputBox" FriendlyName="'INPUT filter_enum_model'" FullSelectorArgument="&lt;webctrl id='filter_enum_model' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='filter_enum_model' tag='INPUT' type='text' aaname='Model' /&gt;" Guid="5d1b2a54-2b51-4664-af45-a5c3a9af7fa8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQsAAAAwCAYAAAAGn1+IAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKxSURBVHhe7djRShtBGIbh3v9dtOCVKA0GAgmIAcGAoCA0UhXPEhj3391MvpmdP92S3ZPs+8GDbSeJnuzbXX8ExhjrMWLBGOu1JBa73T58fH6F7dt7+LP9C2Bi7Nq3BlgL8sVY2CGRAGCsBXkwYiysJqU3AZgma4IuxoK7CgDKmqCLsSi9GMC06YgFAJeOWABw6YgFAJeOWABw6YgFAJeOWABw6YgFAJeOWABw6YgFAJeOWABw6YgFAJeOWABw6YgFAJdu0Fg8rmbh+uYuPBbOGk9heTMLt+vXwllPLw/hdv4QnktnCftep34WAP+iGyEWfgye14uT570QC0zY79k8/Px11Yu9tvQZ/0M3eCyWq7twXbyY7eJdVOcLYgGcoU8whgiF0Q0fi81ruJ/b1/SsvqtYPdVf01g0r7c7jlonBM2jy+F8uc5jkZ3H70sscLlOBWOoUBjdCLGo/rzJ7y4sCItw/9JE4xiLNhRVRA6fUUclvrc517jUjzrueXP3Yt+HWODSlYIxZCiMbpxYtBdx/F9e4pHEwh4pOhf0MSzFc30M6USp+RmazycWuHwajKFDYXQjxeL42JGHI4lF4WJPYlE6z2MhjyAHxAJTYpEYIxRGN1os4iPBOr3gO7E4dWdROteAlGISEQvgXLoRY9HeXVT/0+f/FmPR3nV0fmcR/24XvP5Oon19DER+rogFcC7dqLEo/c4hjYVpLvj4GJHfKdSfcTiv7jg28hhSen/8fsQCOJdu0FgAuCw6YgHApSMWAFw6YgHApSMWAFw6YgHApSMWAFw6YgHApSMWAFw6YgHApSMWAFw6YgHApYux2L69F18MYJqsCboYi4/Pr+IbAEyTNUEXY7Hb7bm7AFCzFlgTdDEWNju0mhANYJrs2rcG5KGwJbFgjDFvxIIx1mMhfAMMBILv0HacLQAAAABJRU5ErkJggg==" InformativeScreenshot="cda69a4f49a1f061f0ba7fa6b7676a8b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='firefox.exe' title='AUTOVIT - Anunturi auto, vanzari autoturisme noi si second hand.' /&gt;" SearchSteps="FuzzySelector, Image">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="387, 369, 263, 18" ElementType="Text" FriendlyName="'Model'" FullSelectorArgument="&lt;webctrl id='downshift-2-label' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='downshift-2-label' tag='LABEL' type='' aaname='Model' check:text='Model' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQsAAAAWCAYAAADXarmjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGRSURBVHhe7dqxbsMgEMbxvv9LtVInJG8oo+XVmf0AFOM7TAAnJ6UDVf8/yVLsM3aW+wQkHwEADAgLACaEBQATwgKACWEBwISwAGBCWAAwKcJiC7P7Dp9f8XBLPGut/nndYpun+IwpzC8fIN/njXcB+D39sOg28z34VCMsgP+oDQs3BRcDwdXdvN5Sk7s3G5iwAP6mTlgsYU7LjVtYpZJrPtaaBi5mHOmogmBbUvhozfs6LB7HnyFFWAAj6YbFJg3uNS3S+d7gdQNLoxcNfexraBhI3d9T7QyGi3qaveh7CQtgJP2w0M/SxGnpUF7XBpalSW8mkWYInfrDMqSpl+FBWAAjuQiLsqmPBj6WB1f37OPVeX+vXl47Psfn1QdhAQznMixy07u9oXX/orrnxczCFhbV+IywAEbyJCxiFuj/KvKeQz9Q2jESLrq5mcfL/Tkg5DzXo3WRGmEBjORpWGiz543ObgNrAOhR/ooSyaal1uZ6NqGB0ownLICRFGEBANcICwAmhAUAE8ICgAlhAcAghB9IvvubPvne2wAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                        <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter" sap:VirtualizedContainerService.HintSize="476,198" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_42" ScopeIdentifier="02c75808-37bd-4b44-a716-c356e13a0bfc" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1">
+                          <uix:NKeyboardShortcuts.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.autovit.ro/" DesignTimeRectangle="387, 391, 263, 44" ElementType="InputBox" FriendlyName="'INPUT filter_enum_model'" FullSelectorArgument="&lt;webctrl id='filter_enum_model' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='filter_enum_model' tag='INPUT' type='text' aaname='Model' /&gt;" Guid="be5e6f24-1958-4964-8f6a-c476071c4fd0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQsAAAAwCAYAAAAGn1+IAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKxSURBVHhe7djRShtBGIbh3v9dtOCVKA0GAgmIAcGAoCA0UhXPEhj3391MvpmdP92S3ZPs+8GDbSeJnuzbXX8ExhjrMWLBGOu1JBa73T58fH6F7dt7+LP9C2Bi7Nq3BlgL8sVY2CGRAGCsBXkwYiysJqU3AZgma4IuxoK7CgDKmqCLsSi9GMC06YgFAJeOWABw6YgFAJeOWABw6YgFAJeOWABw6YgFAJeOWABw6YgFAJeOWABw6YgFAJeOWABw6YgFAJdu0Fg8rmbh+uYuPBbOGk9heTMLt+vXwllPLw/hdv4QnktnCftep34WAP+iGyEWfgye14uT570QC0zY79k8/Px11Yu9tvQZ/0M3eCyWq7twXbyY7eJdVOcLYgGcoU8whgiF0Q0fi81ruJ/b1/SsvqtYPdVf01g0r7c7jlonBM2jy+F8uc5jkZ3H70sscLlOBWOoUBjdCLGo/rzJ7y4sCItw/9JE4xiLNhRVRA6fUUclvrc517jUjzrueXP3Yt+HWODSlYIxZCiMbpxYtBdx/F9e4pHEwh4pOhf0MSzFc30M6USp+RmazycWuHwajKFDYXQjxeL42JGHI4lF4WJPYlE6z2MhjyAHxAJTYpEYIxRGN1os4iPBOr3gO7E4dWdROteAlGISEQvgXLoRY9HeXVT/0+f/FmPR3nV0fmcR/24XvP5Oon19DER+rogFcC7dqLEo/c4hjYVpLvj4GJHfKdSfcTiv7jg28hhSen/8fsQCOJdu0FgAuCw6YgHApSMWAFw6YgHApSMWAFw6YgHApSMWAFw6YgHApSMWAFw6YgHApSMWAFw6YgHApYux2L69F18MYJqsCboYi4/Pr+IbAEyTNUEXY7Hb7bm7AFCzFlgTdDEWNju0mhANYJrs2rcG5KGwJbFgjDFvxIIx1mMhfAMMBILv0HacLQAAAABJRU5ErkJggg==" InformativeScreenshot="9c27116c74361f9145e52842f08ab523.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='firefox.exe' title='AUTOVIT - Anunturi auto, vanzari autoturisme noi si second hand.' /&gt;" SearchSteps="FuzzySelector, Image">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="387, 369, 263, 18" ElementType="Text" FriendlyName="'Model'" FullSelectorArgument="&lt;webctrl id='downshift-2-label' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='downshift-2-label' tag='LABEL' type='' aaname='Model' check:text='Model' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQsAAAAWCAYAAADXarmjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGRSURBVHhe7dqxbsMgEMbxvv9LtVInJG8oo+XVmf0AFOM7TAAnJ6UDVf8/yVLsM3aW+wQkHwEADAgLACaEBQATwgKACWEBwISwAGBCWAAwKcJiC7P7Dp9f8XBLPGut/nndYpun+IwpzC8fIN/njXcB+D39sOg28z34VCMsgP+oDQs3BRcDwdXdvN5Sk7s3G5iwAP6mTlgsYU7LjVtYpZJrPtaaBi5mHOmogmBbUvhozfs6LB7HnyFFWAAj6YbFJg3uNS3S+d7gdQNLoxcNfexraBhI3d9T7QyGi3qaveh7CQtgJP2w0M/SxGnpUF7XBpalSW8mkWYInfrDMqSpl+FBWAAjuQiLsqmPBj6WB1f37OPVeX+vXl47Psfn1QdhAQznMixy07u9oXX/orrnxczCFhbV+IywAEbyJCxiFuj/KvKeQz9Q2jESLrq5mcfL/Tkg5DzXo3WRGmEBjORpWGiz543ObgNrAOhR/ooSyaal1uZ6NqGB0ownLICRFGEBANcICwAmhAUAE8ICgAlhAcAghB9IvvubPvne2wAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NKeyboardShortcuts.Target>
+                        </uix:NKeyboardShortcuts>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into Fuel Field" EmptyFieldMode="[NEmptyFieldMode.SingleLine]" sap:VirtualizedContainerService.HintSize="476,216" sap2010:WorkflowViewState.IdRef="NTypeInto_52" ScopeIdentifier="02c75808-37bd-4b44-a716-c356e13a0bfc" Text="[row.Item(&quot;FUEL TYPE&quot;).ToString]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.autovit.ro/" DesignTimeRectangle="387, 555, 263, 44" ElementType="InputBox" FriendlyName="'INPUT filter_enum_fuel_…'" FullSelectorArgument="&lt;webctrl id='filter_enum_fuel_type' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='filter_enum_fuel_type' tag='INPUT' type='text' aaname='Combustibil' /&gt;" Guid="09d0ac5c-2ab3-4e4d-ae0f-0e917d1934cf" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQsAAAAwCAYAAAAGn1+IAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALvSURBVHhe7djBbptAFEbhql31rSP1eSJ1b0Wt1JWVXaLEeQCcfcgDTPlhGA/DYK5txq3F+SSkOAMMWdwT218cABgQCwAmg1jU9ad7en5xv37/4eDgWOmhBqgFqRALLerEav/ufwNgjdQAtSANRoiFakIoAIhaoCbEQixUEgDopU0gFgCyiAUAE2IBwIRYADAhFgBMiAUAE2IBwIRYADAhFgBMiAUAE2IBwIRYADAhFgBMiAUAk6vF4mP34O7vfx6OzZv78GvL2rvt/aOr/Kuiqsfmb3lwr7VezOx7yrnAf+gKsdBgZOLQDM+2yLQUHEQN/HbvX6RO2ZdY4PYUj0W1bUIxOWAlEAusw93dD/f123fToXMvVTYW9ZvbhLfex9TudTP1EUVrzT0q3cuvtwOrgeuviQevH8R4PX6GzKAmERh+ZOrOTT9Gde+K4nudsm/mGYAzWIKxRCikbCw0hLPfTfhQpMMarvPr4XU/jIdBbM8P1/fr0TDqOY4NahyLNnDxtfvhfaLnHAfAum/mGYAzHQvGUqGQfx+LdDhb/t1EG4P4547isNlFv9A9BjEZnt/dI/duwBvFIr3em42Fdd/MMwAXyAVjyVBI2VhkQ5DIBuXSWIz31Hcn3TWZ9TQC7XPrXUI/6N5sLKz75s8FLhEHY+lQSNlY+P+sg8FOaQBHg3NpLKz/4b1RBHo6NwrGbCys+2aeAViAIlEiFFI4Fo3+v3Q6jM3gdUPUDVS8PvwO4pxYZO4X1rv9Dtcn+4fnknjYG7OxOLYvscBtKx+Llh9IDVN/jIYuWgsDJufEohlEDXa4ZzKY0ceM9ovSXRSBwVpzTDzn5LuFyX0z57Y/A7fhSrEAcOuIBQATYgHAhFgAMCEWAEyIBQATYgHAhFgAMCEWAEyIBQATYgHAhFgAMCEWAEwmY/H0/OKq/bt/BWDN1AI1IRZiUdefbUkIBrBuaoBaoCbEQixEi6qJTuTg4FjnoQakoZBBLABgCrEAYODcX+JUrajjdU1oAAAAAElFTkSuQmCC" InformativeScreenshot="3476c713eea5bce9e6eba22e5d1b3c4b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='firefox.exe' title='AUTOVIT - Anunturi auto, vanzari autoturisme noi si second hand.' /&gt;" SearchSteps="FuzzySelector, Image">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="387, 533, 263, 18" ElementType="Text" FriendlyName="'Combustibil'" FullSelectorArgument="&lt;webctrl id='downshift-8-label' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='downshift-8-label' tag='LABEL' type='' aaname='Combustibil' check:text='Combustibil' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQsAAAAWCAYAAADXarmjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHhSURBVHhe7ZhBbsMgEEWrZtUzeZPbJFIuY8mHsXKW5C4UA4MHbJqxlVSt8p7EgkAYsvhPQz4cAIABZAEAJpAFAJhAFgBgAlkAgAlkAQAmkAUAmFiVxa0/us/DVzFOY1p8Kld3ms4/X9P81dxd3/l63eBuYf6ofr2/ngO8D5UsUngOF1e4Ybz8S1lE6R1dn5ONLAD2UshiPPsg1KJ4Kb8ti5qt9ZEFvC+zLG6D63xwuv6ePmgh3YcMHUYJ3xBDlfZMXUkUURxzjfX9eX3lTlEAs9DqJ5N0QLpeGCHgrc6iUZ/OAiAzy8I/Naag/PzcSOFSYYmhFGGISOr5HMCye6n3V+c9kkV9Z7+/V/c3P0Na9ZEFQGabLMIeHT5PEegUPtXWl3KoA7zcX5xnlIVe15hl0aqPLAAym54hy/BNxMDF7z1BFvq8R7LI86nGMsS7ZFH8HmQBIKg/OFMQVBAX/LXOQrPSZeySRVETWQAIShaeFJRFGH0Q4/MkhUuFpZTBTlmoQK+eV4db1sdhFkFTLAZZNOsjCwChlEUgBSKESIYOnARMxiyCvLa5s/AyyufpWp7UMUitXncWxZofukMIqLuGgDdk0ayPLACEFVkAACxBFgBgAlkAgAlkAQAmkAUAGHDuG9nWjfaE9KsGAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                        <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter" sap:VirtualizedContainerService.HintSize="476,198" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_43" ScopeIdentifier="02c75808-37bd-4b44-a716-c356e13a0bfc" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1">
+                          <uix:NKeyboardShortcuts.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.autovit.ro/" DesignTimeRectangle="387, 555, 263, 44" ElementType="InputBox" FriendlyName="'INPUT filter_enum_fuel_…'" FullSelectorArgument="&lt;webctrl id='filter_enum_fuel_type' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='filter_enum_fuel_type' tag='INPUT' type='text' aaname='Combustibil' /&gt;" Guid="9ca919a0-8b2d-4b99-bac8-b8462b0ce7fa" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQsAAAAwCAYAAAAGn1+IAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALvSURBVHhe7djBbptAFEbhql31rSP1eSJ1b0Wt1JWVXaLEeQCcfcgDTPlhGA/DYK5txq3F+SSkOAMMWdwT218cABgQCwAmg1jU9ad7en5xv37/4eDgWOmhBqgFqRALLerEav/ufwNgjdQAtSANRoiFakIoAIhaoCbEQixUEgDopU0gFgCyiAUAE2IBwIRYADAhFgBMiAUAE2IBwIRYADAhFgBMiAUAE2IBwIRYADAhFgBMiAUAk6vF4mP34O7vfx6OzZv78GvL2rvt/aOr/Kuiqsfmb3lwr7VezOx7yrnAf+gKsdBgZOLQDM+2yLQUHEQN/HbvX6RO2ZdY4PYUj0W1bUIxOWAlEAusw93dD/f123fToXMvVTYW9ZvbhLfex9TudTP1EUVrzT0q3cuvtwOrgeuviQevH8R4PX6GzKAmERh+ZOrOTT9Gde+K4nudsm/mGYAzWIKxRCikbCw0hLPfTfhQpMMarvPr4XU/jIdBbM8P1/fr0TDqOY4NahyLNnDxtfvhfaLnHAfAum/mGYAzHQvGUqGQfx+LdDhb/t1EG4P4547isNlFv9A9BjEZnt/dI/duwBvFIr3em42Fdd/MMwAXyAVjyVBI2VhkQ5DIBuXSWIz31Hcn3TWZ9TQC7XPrXUI/6N5sLKz75s8FLhEHY+lQSNlY+P+sg8FOaQBHg3NpLKz/4b1RBHo6NwrGbCys+2aeAViAIlEiFFI4Fo3+v3Q6jM3gdUPUDVS8PvwO4pxYZO4X1rv9Dtcn+4fnknjYG7OxOLYvscBtKx+Llh9IDVN/jIYuWgsDJufEohlEDXa4ZzKY0ceM9ovSXRSBwVpzTDzn5LuFyX0z57Y/A7fhSrEAcOuIBQATYgHAhFgAMCEWAEyIBQATYgHAhFgAMCEWAEyIBQATYgHAhFgAMCEWAEwmY/H0/OKq/bt/BWDN1AI1IRZiUdefbUkIBrBuaoBaoCbEQixEi6qJTuTg4FjnoQakoZBBLABgCrEAYODcX+JUrajjdU1oAAAAAElFTkSuQmCC" InformativeScreenshot="3476c713eea5bce9e6eba22e5d1b3c4b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='firefox.exe' title='AUTOVIT - Anunturi auto, vanzari autoturisme noi si second hand.' /&gt;" SearchSteps="FuzzySelector, Image">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="387, 533, 263, 18" ElementType="Text" FriendlyName="'Combustibil'" FullSelectorArgument="&lt;webctrl id='downshift-8-label' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='downshift-8-label' tag='LABEL' type='' aaname='Combustibil' check:text='Combustibil' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQsAAAAWCAYAAADXarmjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHhSURBVHhe7ZhBbsMgEEWrZtUzeZPbJFIuY8mHsXKW5C4UA4MHbJqxlVSt8p7EgkAYsvhPQz4cAIABZAEAJpAFAJhAFgBgAlkAgAlkAQAmkAUAmFiVxa0/us/DVzFOY1p8Kld3ms4/X9P81dxd3/l63eBuYf6ofr2/ngO8D5UsUngOF1e4Ybz8S1lE6R1dn5ONLAD2UshiPPsg1KJ4Kb8ti5qt9ZEFvC+zLG6D63xwuv6ePmgh3YcMHUYJ3xBDlfZMXUkUURxzjfX9eX3lTlEAs9DqJ5N0QLpeGCHgrc6iUZ/OAiAzy8I/Naag/PzcSOFSYYmhFGGISOr5HMCye6n3V+c9kkV9Z7+/V/c3P0Na9ZEFQGabLMIeHT5PEegUPtXWl3KoA7zcX5xnlIVe15hl0aqPLAAym54hy/BNxMDF7z1BFvq8R7LI86nGMsS7ZFH8HmQBIKg/OFMQVBAX/LXOQrPSZeySRVETWQAIShaeFJRFGH0Q4/MkhUuFpZTBTlmoQK+eV4db1sdhFkFTLAZZNOsjCwChlEUgBSKESIYOnARMxiyCvLa5s/AyyufpWp7UMUitXncWxZofukMIqLuGgDdk0ayPLACEFVkAACxBFgBgAlkAgAlkAQAmkAUAGHDuG9nWjfaE9KsGAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NKeyboardShortcuts.Target>
+                        </uix:NKeyboardShortcuts>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into Begin Year Field" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="476,216" sap2010:WorkflowViewState.IdRef="NTypeInto_53" ScopeIdentifier="02c75808-37bd-4b44-a716-c356e13a0bfc" Text="[row.Item(&quot;YEAR BEGIN&quot;).ToString]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.autovit.ro/" DesignTimeRectangle="673, 473, 127, 44" ElementType="InputBox" FriendlyName="'INPUT filter_float_year…'" FullSelectorArgument="&lt;webctrl id='filter_float_year:from' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='filter_float_year:from' tag='INPUT' type='text' aaname='' /&gt;" Guid="dd2f8925-df23-4778-963d-7bc20442c5d0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIMAAAAwCAYAAAAyw8m9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHeSURBVHhe7dzBTsJAFEZhoyvfmsTnacK+IZq4Iuw0Ag9Q3FMfYOyF4Wc6tthox0jnfMksoIXNPZ121RsHeMQAacVQ1x/u5fXNPT49sya+bM4275BisAN2UrV7999gymzONu8wCMVgpRBCXmzeNvcTxWCVID/h3Ikhc8QAIQYIMUCIAUIMEGKAEAOEGCDEACEGCDFAiAFCDJC/jaHeurLcur3/ONzOLYuVq/wnpEEMEGL4x2azB3d7dz9o2bm/lTgGG+LcFX4tN3EM0fHeaUcxVCv9pigWbl377ydoSBBjhGASxlC7dTl35eY8qWrZDE8xxMdt4H2DbcdQNVEpKAvjR7vN9bgUxFghmHQx2C0h3trD20THEC2WMJ6zaGdouXRsOrqCGDMEky6Gris2jiG4RZzWoBgOoYW/m34MJgxi7BBM2hjiIYWBdMXSK4jhy//msTOcWAQpQjDpYjgMKbzSj88I5wDi45dEMQQR7TeLbHaG1BLG0Ght583DYRXcJg6OQXy/3YdXv4/K/6ZsHiZz2hlSShsDrgoxQIgBQgwQYoAQA4QYIMQAIQYIMUCIAUIMEGKAdMbAq//y0/vqP14Kmhebs82786Wgxg5YKXYSa9rL5hyGYFoxIG/EAM+5T+FiQAqjwWkOAAAAAElFTkSuQmCC" InformativeScreenshot="b374fce13385b2995a678fd8dde1f2f2.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='AUTOVIT - Anunturi auto, vanzari autoturisme noi si second hand.' /&gt;" SearchSteps="FuzzySelector, Image" />
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                        <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter" sap:VirtualizedContainerService.HintSize="476,198" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_44" ScopeIdentifier="02c75808-37bd-4b44-a716-c356e13a0bfc" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1">
+                          <uix:NKeyboardShortcuts.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.autovit.ro/" DesignTimeRectangle="673, 473, 127, 44" ElementType="InputBox" FriendlyName="'INPUT filter_float_year…'" FullSelectorArgument="&lt;webctrl id='filter_float_year:from' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='filter_float_year:from' tag='INPUT' type='text' aaname='' /&gt;" Guid="5a220d6e-2f64-4c35-861a-339d216d63cb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIMAAAAwCAYAAAAyw8m9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJoSURBVHhe7dxNS9xQFMZx0VW/tdBvIBQsLsRFRZCgdBtEwY1TC8pIZ2bTdpPporoxfoBjnpicObm9eVGw0XufHwQnkxk35z83mVlkTYgqjIFUI4Y8f5DpzQ85PTvnFviGOWPelsaAA3hRtvxTPUMhw5wxbxuExoBSGEJcMG/MvaYxoBKKj507Y4gcYyDFGEgxBlKMgRRjIMUYSDEGUoyBFGMgxRgCs5jPJM/vq73nYQyB+fxpq9wQRb3/9SiRZZaV+10YQ2DqGL5/u/Dud2EMgXk/MeQLSdOFPP+MtpRJcin9Cx31xTC9vpK727/lYxdjCIw7fFwvdMVhMYY3bHPzo6xvfBi04bXgGza+XdTfMEaMAUM8lqTaJnM3Bud467SdGLJLfU+SnMgsr54P0JAg6hCga9gwUgy5zNJjSeerSWWTYngag3scA28bbDOGrIhKg0IYL1pt3o+uIGwI8DZjwCnBXdrtacIzRMRi41lxVoaGrmPh8AXhhgDusN2LxXFi8H1i3RjMKaLeBsVQhmbfF34MYIPwhQDusPF4d2dbfv/6qfvjxOAOyQbii6WVieGf/xvHylBDBG0hgC8Gu394sD9CDOWQ7Cf96RphFYB7vIsTg4nofn4SzcowRF8MgJ+mfb81vGIMhcZyXlwcZuY0UXoKon+5t5/+KqrqPWlxMRnTytBnSAxtXjcG+u++7O02ho+/uGZgDJHCxWLbT85dGAMpxkCKMZBiDKQYAynGQIoxkGIMpBgDKcZAijGQ8sbAW//Fp/XWf7wpaFwwZ8zbe1NQwAGUghdxC3vDnG0I0IiB4sYYqCLyCJi030PYHlVaAAAAAElFTkSuQmCC" InformativeScreenshot="6660f786485a6456baef76c4d223bbf9.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='AUTOVIT - Anunturi auto, vanzari autoturisme noi si second hand.' /&gt;" SearchSteps="FuzzySelector, Image" />
+                          </uix:NKeyboardShortcuts.Target>
+                        </uix:NKeyboardShortcuts>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type into End Year Field" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="476,216" sap2010:WorkflowViewState.IdRef="NTypeInto_54" ScopeIdentifier="02c75808-37bd-4b44-a716-c356e13a0bfc" Text="[row.Item(&quot;YEAR END&quot;).ToString]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.autovit.ro/" DesignTimeRectangle="808, 473, 127, 44" ElementType="InputBox" FriendlyName="'INPUT filter_float_year…'" FullSelectorArgument="&lt;webctrl id='filter_float_year:to' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='filter_float_year:to' tag='INPUT' type='text' aaname='' /&gt;" Guid="a321fb82-34f1-4114-9750-cda19aab403c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIMAAAAwCAYAAAAyw8m9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH5SURBVHhe7dxBToNAFIBhoytv3cTzNHFPGk1cke40tj0AdV88wMijM49h2tKpMpF2/i8hCnQS0/cDrrgzgEUMUL0Y6vrbvH98mpfXN7YMNpm1zNzRGOSgfKDaftkjuHUya5m5C0JjkEoIIT8yc5m90BikEOTJzZ4YQAzoEAMUMUARAxQxQBEDFDFAEQMUMUARAxQxQBEDFDFA3XgMW1POl6ayexhGDFDEMGGz2ZO5f3iM2uSzf5UoBjcE+fls5u22MKvanhbV0h4Pz9VmVci+vzYY6Mm1oSCG6HXTERPEGCGIhDEEQ2wH0e1X643Z2d/bc4Xblxj6a6uy2S+3dm9obagfQ/y6aRkKYqwQRMIYwitvP+RS6/D5Q3N3hnZnr96YInLgfb89Nz3HghgzBJEwhsMvWq7wYm2nLAPWW7Z/J4iI4eTaUPB3RK+bJj+IsUMQ/3NnCB4Z/aGdiWFwbcg7d9G66ZIIUoQgEsbQXHnec363XnTP6OB53Z7TwUTEcHJtKIghel2eEsbQfNHt1Xjslry/S7hzRfOPXXeVnntMDK0N+Vf/JevylDYGu4frQAxQxACVKAZcI2KAIgYoYoAiBihigCIGKGKAIgYoYoA6iIFX/+Xp6Kv/eClofmTWMvODl4IKOSiVyAfYbn+TWbsQRC8G5I0YYBnzAxjpHJPvTjkRAAAAAElFTkSuQmCC" InformativeScreenshot="1fc27ed04a627db3607fcc03211f4481.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='AUTOVIT - Anunturi auto, vanzari autoturisme noi si second hand.' /&gt;" SearchSteps="FuzzySelector, Image" />
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                        <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter" sap:VirtualizedContainerService.HintSize="476,198" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_45" ScopeIdentifier="02c75808-37bd-4b44-a716-c356e13a0bfc" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1">
+                          <uix:NKeyboardShortcuts.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.autovit.ro/" DesignTimeRectangle="808, 473, 127, 44" ElementType="InputBox" FriendlyName="'INPUT filter_float_year…'" FullSelectorArgument="&lt;webctrl id='filter_float_year:to' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='filter_float_year:to' tag='INPUT' type='text' aaname='' /&gt;" Guid="1efc4383-e590-478c-a74f-e0aef765d27d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIMAAAAwCAYAAAAyw8m9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKESURBVHhe7ZzNattAFIVDsspbB/oGhUJKF6GLlkIxLd2KkEI3dVNIcantTduNnEWaTdQHuPWRZ65H1/JoHHAlS+eDwb4aXTA+n0Y/Cx0JIQ7KQJSKDEXxVybff8jVx08cAxjIGpl7VAZsxA754tZtIX0HWSNzL4TKAEsowvBA5sgeqAwwhAwTnz1lIJSBrKEMRKEMRKEMRKEMRKEMRKEMRKEMRKEMRKEMPWI+m0pRPLhqdyhDj3j+7Gk5IIWvP7wbySLPy7oJytAjvAxfv3yurZugDD2CMkRZyHh0LWmL5OHTJMPk243c/7krv9dBGXqEDR/XCzE5LJShw5ydPZHjk9OkgX3rwsbdhb/DaEkGHwI+38uoHJcyLdw0yK/ddjtXyDRDHfaaQLf2WowMyX3dIUUI7AOawm5RBhNiGcS6zmdz0TtizGW+hgzV3ny8rMcLV8V6LVUZ0vu6RUwILwLosAz2yFuFPFY7QsLQ/MpQFiuKuWSJgVd57Fz3qBMiFAHYsO3FYosybP7ROMKzmUsZAeuSHa4ECTJs7bWY35Hc101CIawIwIaN7xcvzuX3r59atyRDZGUwp4xqaA0yRHstwdxOfd0FEtSJAOpkCOu3b163JcPyyAvO8w+zy/U52pyvyzkNJkGGrb0WI0Ny32HSJAPAo+ltzxr2KMPyjy6PxrolebVK+LlseWG3PkqbThOxXkt49O/Sd5ikyBBjvzK4ivwfXr28qISPT1wzUIaBgovF2CPnGJSBKHuSgRwilIEolIEolIEolIEolIEolIEolIEolIEolIEoGzLw1X/DpPbVf3wp6PBA1sh846WgABthCXbg6P9A1l4EUJGBDBvKQBwi/wDQLLvMdXQmSQAAAABJRU5ErkJggg==" InformativeScreenshot="22f12cd6690c1bb13e75d0cf57245d7f.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='AUTOVIT - Anunturi auto, vanzari autoturisme noi si second hand.' /&gt;" SearchSteps="FuzzySelector, Image" />
+                          </uix:NKeyboardShortcuts.Target>
+                        </uix:NKeyboardShortcuts>
+                        <uix:NClick ClickType="Single" DisplayName="Click Search" sap:VirtualizedContainerService.HintSize="476,156" sap2010:WorkflowViewState.IdRef="NClick_18" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="02c75808-37bd-4b44-a716-c356e13a0bfc" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.autovit.ro/" DesignTimeRectangle="673, 631, 263, 44" ElementType="Button" FriendlyName="'Cauta 3 096 anunturi'" FullSelectorArgument="&lt;webctrl aria-role='button' parentid='__next' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' parentid='__next' tag='BUTTON' type='' aaname='Cauta 3 096 anunturi' check:text='Cauta 3 096 anunturi' /&gt;" Guid="72f1efc2-ff0d-41fb-8d90-13c80fd29f94" ImageBase64="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" InformativeScreenshot="b9f32b54691e99f87dbedd26d339fdc2.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='AUTOVIT - Anunturi auto, vanzari autoturisme noi si second hand.' /&gt;" SearchSteps="FuzzySelector, Image" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="476,438" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Search for the Car Offers" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="0a5268ff7fb6fe79c2c7ce856871000d" Selector="&lt;html app='firefox.exe' title='* - autovit.ro' /&gt;">
+                            <ui:BrowserScope.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:ExtractData DelayBetweenPagesMS="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract The Offers To DataTable" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='NAME' attr='text' name2='URL' attr2='href'&gt;&lt;webctrl tag='article' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h2' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="500" NextLinkSelector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;svg&amp;gt;path' idx='2' parentid='__next' tag='path' /&gt;" SimulateClick="True">
+                                    <ui:ExtractData.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4b4bc30f-e913-4fbb-a3ec-c47aa4e16374" InformativeScreenshot="8d7b309271ee31559a52f37b3ed06f0b" Selector="&lt;webctrl tag='MAIN' /&gt;" WaitForReady="COMPLETE">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                      </ui:Target>
+                                    </ui:ExtractData.Target>
+                                  </ui:ExtractData>
+                                </Sequence>
+                              </ActivityAction>
+                            </ui:BrowserScope.Body>
+                          </ui:BrowserScope>
+                        </Sequence>
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEachRow.Body>
+                </ui:ForEachRow>
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Firefox" IconBase64="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" InformativeScreenshot="7a85cba8840fc04ca38ecce24765b138.png" Selector="&lt;html app='firefox.exe' title='AUTOVIT - Anunturi auto, vanzari autoturisme noi si second hand.'/&gt;" Url="[Config(&quot;AutoVitURL&quot;).ToString]" />
+          </uix:NApplicationCard.TargetApp>
+        </uix:NApplicationCard>
+      </Sequence>
+    </FlowStep>
+    <x:Reference>__ReferenceID3</x:Reference>
+  </Flowchart>
+</Activity>
